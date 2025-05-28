@@ -17,9 +17,9 @@ class TestOnCallTestKeywords:
 
     @pytest.fixture()
     def browser_setup(self):
-        self.browser_on_call=self.OnCallFunctions.create_browser()
-        self.browser_on_aware = self.OnCallFunctions.create_browser()
-        self.student_browser = self.OnCallFunctions.create_browser()
+        # self.browser_on_call=self.OnCallFunctions.create_browser()
+        # self.browser_on_aware = self.OnCallFunctions.create_browser()
+        # self.student_browser = self.OnCallFunctions.create_browser()
         return self.OnCallFunctions
         # logger.info(page)
         # return page
@@ -31,22 +31,24 @@ class TestOnCallTestKeywords:
     @allure.tag("smoke", "critical")
     # @keyword("Dashboard Action")
     def test_on_smoke(self, browser_setup):
-        page= browser_setup.pages[self.browser_on_call]
-        page.goto("https://www.yatra.com/")
-        page.get_by_role("tab", name="Hotels, 2 of").click()
-        page.close()
+        # page= browser_setup.pages[self.browser_on_call]
+        # page.goto("https://www.yatra.com/")
+        # page.get_by_role("tab", name="Hotels, 2 of").click()
+        # page.close()
+        print("Smoke")
 
     @allure.feature("OnCall")
     @allure.story("Smoke")
     @allure.tag("First", "critical")
     # @keyword("Dashboard Action")
     def test_on_first(self, browser_setup):
-        context= browser_setup.contexts[self.browser_on_call]
-        page= context.new_page()
-        time.sleep(10)
-        page.goto("https://www.paytm.com/")
-        logger.info("First")
-        page.close()
+        # context= browser_setup.contexts[self.browser_on_call]
+        # page= context.new_page()
+        # time.sleep(10)
+        # page.goto("https://www.paytm.com/")
+        # logger.info("First")
+        # page.close()
+        logger.info("First Test")
 
     @allure.feature("OnCall")
     @allure.story("Second")

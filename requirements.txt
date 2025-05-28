@@ -1,5 +1,6 @@
 allure-pytest
 allure-python-commons
+install allure-pytest-html
 attrs
 certifi
 charset-normalizer
